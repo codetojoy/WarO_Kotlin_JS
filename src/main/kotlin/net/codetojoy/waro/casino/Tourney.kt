@@ -10,8 +10,6 @@ class Tourney(internal val players: List<Player>,
     private val log = Log
 
     fun playGames() {
-        log.log("Tourney WTF 2")
-
         for (i in 1..numGames) {
             playGame(numCards)
         }
