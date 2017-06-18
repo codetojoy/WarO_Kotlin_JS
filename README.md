@@ -6,7 +6,6 @@ Work in progress! The War-O [code kata](https://en.wikipedia.org/wiki/Kata_(prog
 
 ### TODO
 
-* figure out how to run tests !!
 * write a proper shuffle function 
 * consider some kind of view layer or REST api 
 
