@@ -29,6 +29,13 @@ From [this fabulous article](https://medium.com/@Miqubel/your-first-node-js-app-
 * `gradle build`
 * `node node/index.js`
 
+### To test:
+
+* `npm install`
+* `./prep_for_test_html.sh`
+* refresh `test.html` to run QUnit tests
+* note that this does an alternate build (in AMD vs CommonJS) so to run, be sure to re-build
+
 ### Entry point
 
 * This example uses a [Gradle plugin](https://kotlinlang.org/docs/tutorials/javascript/getting-started-gradle/getting-started-with-gradle.html) to compile Kotlin to [CommonJS](https://kotlinlang.org/docs/tutorials/javascript/getting-started-gradle/getting-started-with-gradle.html). It uses Node JS and [Express](https://expressjs.com/); the entry point is the [Main class](https://github.com/codetojoy/WarO_Kotlin_JS/blob/master/src/main/kotlin/net/codetojoy/waro/Main.kt).

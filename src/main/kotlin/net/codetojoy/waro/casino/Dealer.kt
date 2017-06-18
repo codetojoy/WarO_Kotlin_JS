@@ -29,7 +29,7 @@ class Dealer() {
 
     // ------ internal
 
-    internal fun playRound(prizeCard: Int, players: List<Player>): Player {
+    fun playRound(prizeCard: Int, players: List<Player>): Player {
         val (winner, winningBid) = findRoundWinner(prizeCard, players)
 
         log.logBanner()
@@ -42,7 +42,7 @@ class Dealer() {
         return winner
     }
 
-    internal fun findRoundWinner(prizeCard: Int, players: List<Player>): Pair<Player, Bid> {
+    fun findRoundWinner(prizeCard: Int, players: List<Player>): Pair<Player, Bid> {
         val fakePlayer = Player.fakePlayer()
         val fakeBid = Bid(-1, fakePlayer)
         val seed = Pair(fakePlayer, fakeBid)
@@ -61,7 +61,7 @@ class Dealer() {
         return result
     }
 
-    internal fun dealHands(numCards: Int, numPlayers: Int): List<List<Int>> {
+    fun dealHands(numCards: Int, numPlayers: Int): List<List<Int>> {
         var result = ArrayList<List<Int>>()
 
         val deck = newDeck(numCards)
@@ -74,7 +74,7 @@ class Dealer() {
         return result
     }
 
-    internal fun newDeck(numCards: Int): MutableList<Int> {
+    fun newDeck(numCards: Int): MutableList<Int> {
         val deck = MutableList(numCards, { it + 1 })
         collections.shuffle(deck)
         return deck

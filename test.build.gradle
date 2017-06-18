@@ -22,7 +22,7 @@ dependencies {
   testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
 }
 
-compileKotlin2Js.kotlinOptions {
-  moduleKind = "commonjs"
-  outputFile = "node/index.js"
+compileKotlin2Js {
+  // kotlinOptions.moduleKind = "commonjs" 
 }
+
