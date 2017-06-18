@@ -1,6 +1,8 @@
 
 package net.codetojoy.waro.casino
 
+import net.codetojoy.waro.domain.Hand
+
 import kotlin.js.Math
 
 class Collections() {
@@ -24,8 +26,8 @@ class Collections() {
         return list
     }
 
-    fun partition(bigList: MutableList<Int>, n: Int): MutableList<MutableList<Int>> {
-        var lists: MutableList<MutableList<Int>> = mutableListOf()
+    fun partition(bigList: MutableList<Int>, n: Int): MutableList<Hand> {
+        var lists: MutableList<Hand> = mutableListOf()
 
         val numItems = bigList.size
         val numItemsPerList = numItems / n
@@ -39,7 +41,8 @@ class Collections() {
             val isReset = (isBoundary || isLast)
 
             if (isReset) {
-                lists.add(thisList)
+                val hand = Hand(thisList)
+                lists.add(hand)
                 thisList = mutableListOf() 
             } 
         }
