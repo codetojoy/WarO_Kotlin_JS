@@ -10,7 +10,7 @@ class Collections() {
     fun shuffle(list: MutableList<Int>): MutableList<Int> {
         var currentIndex = list.size
 
-        while (0 !== currentIndex) {
+        while (currentIndex != 0) {
             // Pick a remaining element...
             val randomIndex = pickRandom(currentIndex)
             currentIndex -= 1

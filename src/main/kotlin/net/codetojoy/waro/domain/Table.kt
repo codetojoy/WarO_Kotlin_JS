@@ -6,7 +6,12 @@ data class Table(var players: List<Player>, var kitty: List<Int>) {
         val playerTotal = players.sumBy { p -> p.playerStats.total } 
         val roundsTotal = players.sumBy { p -> p.playerStats.numRoundsWon } 
                 
-        // assert(kitty.sum() == playerTotal)
-        // assert(kitty.size == roundsTotal)        
+        if (kitty.sum() != playerTotal) {
+            throw Exception("internal error on player total")
+        }
+
+        if (kitty.size != roundsTotal) {
+            throw Exception("internal error on rounds total")
+        }
     }
 }

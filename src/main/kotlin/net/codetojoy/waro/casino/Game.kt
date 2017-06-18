@@ -38,6 +38,7 @@ class Game() {
         val winner:Player = tmpWinner!!
 
         if (Config.isVerbose) {
+            log.logBanner()
             players.forEach { p -> 
                 val stats = p.playerStats
                 log.log("${p.name} won ${stats.numRoundsWon} rounds with ${stats.total}")
